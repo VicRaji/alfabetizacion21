@@ -700,17 +700,142 @@ if (typeof(Telerik) != 'undefined' && Type.isNamespace(Telerik.Web))
             .texto-centrado{
                 text-align: center;
             }
+            /*Desde acá comienzas mis estilos (Att:Víctor)*/
+
+            /*-----------BANNER-----------*/
+            #banner{
+            background-image: url(I.E.\ COLEGIO\ PARROQUIAL\ CARMELITANO_files/fiesta_1.png);
+            background-size: cover;
+            padding: 20% 2%;
+            position: relative;
+            z-index: 1;
+            background-attachment: fixed;
+            }
+            #banner::after{
+
+                position: absolute;
+                background-color:black;
+                content:'';
+                height: 100%;
+                width: 100%;
+                left: 0;
+                top:0;
+                opacity:0.3;
+                z-index: -1;
+            }
+            #banner h1{
+
+                position: relative;
+                font-size:4rem;
+            }
+            /*---------FINALIZA BANNER----------*/
+
+            .titulos-cards{
+                font-weight: bold;
+            }
+            .fondoEnlaces{
+                text-decoration: none;
+                color: rgba(34, 4, 167, 0.795);
+            }
+            .fondoEnlaces:hover{
+                color:black;
+            }
+            .zoom{
+                overflow: hidden;
+            }
+            .zoom img{
+                transition: 0.5s filter 0.5s ease;
+                filter: grayscale(0);
+            }
+            .zoom:hover img{
+                filter: grayscale(100%);
+                transform: scale(1.1);
+            }
         
 </style>
 <!--ACÁ EMPIEZA LA PÁGINA-->
-<section class="tm-section"> <!--institucional-->
+<section class="tm-section" id="institucional"> <!--institucional-->
+    <section id="banner">
+        <div>
+            <h1 class="text-white" id="titulo">BIENVENIDOS</h1>
+            <a class="btn-outline-info btn"href="#institucion">Institución</a>
+            <a class="btn-outline-info btn"href="#parroquial">Parroquia</a>
+        </div>
+    </section>
+    <div class="container mb-4 mt-4" id="institucion">
+        <h1 class="text-dark text-center">SOMOS UNICARMEN</h1>
+        <div class="row mt-4">
+                <div class="col-4">
+                    <div class="card" style="width: 20rem;">
+                        <div class="card-body">
+                            <h6 class="card-tittle text-center titulos-cards">POLITICAS DE PRIVACIDAD Y MANEJO DE DATOS</h6>
+                        </div>
+                        <a href="http://www.unicarmen.edu.co/Documentos/2020/politicas%20de%20privacidad.pdf"><img src="I.E. COLEGIO PARROQUIAL CARMELITANO_files/datos.png" class="card-img-top" alt="imagen de politica de privacidad y manejo de datos" target="_blank" style="height:31.4rem"></a>
+                        <a href="http://www.unicarmen.edu.co/Documentos/2020/politicas%20de%20privacidad.pdf" type="button" class="btn btn-info"target="_blank">LEER MÁS</a>
+                    </div>
+                </div>
+                 <div class="col-8">
+                    <div class="card" style="width: 40rem; height: 20rem;">
+                         <div class="card-body">
+                                <h6 class="card-text text-center titulos-cards">INSTRUCTIVO PARA LA INSCRIPCION DE LA PREMATRICULA</h6>
+                         </div>
+                            <a href="http://www.unicarmen.edu.co/Documentos/PROCEDIMIENTO%20DE%20MATRICULA%20NUEVOS.pdf"target="_blank"><img src="I.E. COLEGIO PARROQUIAL CARMELITANO_files/maticulas_2022.jpg" class="card-img-top" alt="img instructivo"></a>
+                            <a href="http://www.unicarmen.edu.co/Documentos/PROCEDIMIENTO%20DE%20MATRICULA%20NUEVOS.pdf" type="button" class="btn btn-info" target="_blank">LEER MÁS</a>
+                    </div>
+
+                    <div class="card mt-3" style="width: 40rem;">
+                        <div class="card-body">
+                               <h6 class="card-text text-center titulos-cards">COMUNICADO PARA PADRES DE FAMILIA</h6>
+                        </div>
+                           <a href="http://www.unicarmen.edu.co/Documentos/2021/COMUNICADO%20PARA%20LA%20COMUNIDAD%20EDUCATIVA%20RETOMANDO%20LA%20PRESENCIALIDAD%20DE%20LAS%20ACTIVIDADES%20ESCOLARES%20REVISADO.pdf"target="_blank"><img src="I.E. COLEGIO PARROQUIAL CARMELITANO_files/actividad_escolar.jpg" class="card-img-top" alt="img instructivo" style="height:12rem"></a>
+                           <a href="http://www.unicarmen.edu.co/Documentos/2021/COMUNICADO%20PARA%20LA%20COMUNIDAD%20EDUCATIVA%20RETOMANDO%20LA%20PRESENCIALIDAD%20DE%20LAS%20ACTIVIDADES%20ESCOLARES%20REVISADO.pdf" type="button" class="btn btn-info" target="_blank">LEER MÁS</a>
+                   </div>
+                </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container mt-4 mb-4">
+        <div class="card mb-3">
+            <div class="zoom">
+                <img src="I.E. COLEGIO PARROQUIAL CARMELITANO_files/feria.png" class="card-img-top" alt="feria-oport">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title text-center titulos-cards">FERIA DE LAS OPORTUNIDADES</h5>
+              <p class="text-center"><a href="http://www.unicarmen.edu.co/Documentos/2021/FERIA.pdf" class="fondoEnlaces"target="_blank">Conoce más</a></p>
+            </div>
+          </div>
+    </div>
+    <hr>
+    <div class="container mt-4">
+        <h3 class="text-center text-black titulos-cards">INICIO DE ACTIVIDADES ACADÉMICAS CON LOS ESTUDIANTES</h3>
+        <div class="row">
+            <div class="col-6 mt-4 ">
+                <p class="text-align-justify">El próximo lunes 12 de julio, el colegio se engalana para recibir a los estudiantes en sus instalaciones. Será una bienvenida cargada de mucha emotividad ya que hace meses se esperaban y por fin, se hace realidad. </p>
+                <p class="">Los horarios serán los siguientes:</p>
+                <ul>
+                    <li>· Preescolar: 7:50 am a 1:00 pm</li>
+                    <li>· Primaria: 7:30 am a 1:45 pm</li>
+                    <li>· Bachillerato: 7:00 am a 2:00 pm</li>
+                </ul>
+            </div>  
+            <div class="col-6 mt-4">
+                <img src="I.E. COLEGIO PARROQUIAL CARMELITANO_files/HOLA.jpg" alt="" class="w-100 imf-fluid">
+            </div>
+        </div>
+        <div class="row mt-5">
+            <h3 class="text-center text-black titulos-cards">INICIO DE ACTIVIDADES EN EL COLEGIO</h3>
+            <div class="col-12">
+                <p class="text-align-justify">El lunes 6 de julio en el patio central de la institución, los docentes liderados por el Rector Pbro. Jorge Iván Rengifo Álvarez, se dio inicio a las actividades académicas en este segundo semestre del año. En momento pequeño de oración se oró para llevar a feliz termino la obra que Dios nos encomendó. </p>
+                <img src="I.E. COLEGIO PARROQUIAL CARMELITANO_files/INICIO.jpg" alt="" class="w-100 imf-fluid">
+            </div>   
+        </div>
+    </div>
+</section>
+<section id="parroquial"> <!--PARROQUIAL-->
     
 </section>
-<section> <!--PARROQUIAL-->
     
-</section>
-    
-<section> <!--CORONAVIRUS-->
+<section id="coronavirus"> <!--CORONAVIRUS-->
 
 </section>
 <script type="text/javascript">
