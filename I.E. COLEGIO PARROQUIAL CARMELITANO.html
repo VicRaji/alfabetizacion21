@@ -310,12 +310,14 @@ if (typeof(Telerik) != 'undefined' && Type.isNamespace(Telerik.Web))
                 .boton2{ 
                     position:relative;
                     display:inline-block;
+                    border-radius: 20px;
                     width:300px;
                     height:50px;
                     box-shadow: 0 5px 25px rgba(0,0,0,0.50);
                 }
                 .boton2 span{
                     position:absolute;
+                    border-radius: 20px;
                     top:0;
                     left:0;
                     width:100%;
@@ -360,18 +362,20 @@ if (typeof(Telerik) != 'undefined' && Type.isNamespace(Telerik.Web))
                 .boton{
                     position:relative;
                     display:inline-block;
+                    border-radius: 20px;
                     width:300px;
                     height:50px;
                     box-shadow: 0 5px 25px rgba(0,0,0,0.50);
                 }
                 .boton span{
                     position:absolute;
+                    border-radius: 20px;
                     top:0;
                     left:0;
                     width:100%;
                     height:100%;
                     color:#fff;
-                    background:#eb5a5a;
+                    background:#41e09e;
                     display:flex;
                     justify-content:center;
                     align-items: center;
@@ -380,7 +384,7 @@ if (typeof(Telerik) != 'undefined' && Type.isNamespace(Telerik.Web))
                     font-size: 18px;
                 }
                 .boton span:nth-child(2){
-                    color:#eb5a5a;
+                    color:#41e09e; 
                     background:#fff;
                     overflow:hidden;
                     z-index: 2;
@@ -420,8 +424,8 @@ if (typeof(Telerik) != 'undefined' && Type.isNamespace(Telerik.Web))
                     left:0;
                     width:100%;
                     height:100%;
-                    color:#000000;
-                    background:#FFF;
+                    color:#fff;
+                    background:#8c00ff;
                     display:flex;
                     justify-content:center;
                     align-items: center;
@@ -430,15 +434,18 @@ if (typeof(Telerik) != 'undefined' && Type.isNamespace(Telerik.Web))
                     font-size: 18px;
                 }
                 .boton3 span:nth-child(2){
-                    color:#fff;
-                    background:#8c00ff;
+                    color:#8c00ff;
+                    background:#fff;
                     overflow:hidden;
                     z-index: 2;
                     transition:0.5s;
-                    clip-path: circle(100% at 60% 60%);
+                    clip-path: polygon(55% 0, 100% 0%, 100% 100%, 55% 100%, 47.8% 50%);
                 }
                 .boton3 span:nth-child(2):hover{
-                    clip-path: circle(0% at 50% 50%);
+                    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%, 0% 50%);
+                }
+                .boton3 span:nth-child(1):hover ~ span:nth-child(2){
+                    clip-path: polygon(100% 0, 100% 0%, 100% 100%, 100% 100%, 100% 50%);
                 }
                 /*---finaliza boton feria oportunidades---*/
             /*----Finaliza Botones----*/
@@ -456,14 +463,359 @@ if (typeof(Telerik) != 'undefined' && Type.isNamespace(Telerik.Web))
             .texto-centrado{
                 text-align: center;
             }
+            .tamaño-p{
+                font-size: 20px;
+            }
+
+
+            #convivencia {
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                min-height:40vh;
+            }
+            .container1{
+                position:relative;
+                width:1000px;
+                display:flex;
+                justify-content:center;
+                align-items: center;
+                gap:20px;
+                flex-wrap:wrap;
+            }
+            .container1 .serviceBox{
+                position:relative;
+                width:350px;
+                height:400px;
+                background: #975219;
+                border-radius:30px;
+                overflow: hidden;
+            }
+            .container1 .serviceBox .icon{
+                position:absolute;
+                top:0;
+                left:0;
+                width:100%;
+                height:100%;
+                background: var(--i);
+                transition:0.5s;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                z-index:2;
+                transition-delay: 0.25s;
+            }
+            .container1 .serviceBox:hover .icon{
+                top:30px;
+                left: calc(50% - 40px);
+                width: 80px;
+                height:80px;
+                border-radius:50%;
+                transition-delay: 0s;
+            }
+            .container1 .serviceBox .icon img{
+                width:100px;
+                height:100px;
+                transition:0.5s;
+                transition-delay: 0.25s;
+            }
+            .container1 .serviceBox:hover .icon img{
+                width:50px;
+                height:50px;
+                transition-delay: 0s;
+            }
+            .container1 .serviceBox .content{
+                position:relative;
+                padding:20px;
+                color:#fff;
+                text-align: center;
+                margin-top: 100px;
+                z-index:1;
+                transform: scale(0);
+                transition: 0.5s;
+                transition-delay: 0s;
+            }
+            .container1 .serviceBox:hover .content{
+                transform: scale(1);
+                transition-delay: 0.25s;
+            }
+            .container1 .serviceBox .content p{
+                font-size:15px;
+                
+            }
+            
+            #titCircu{
+                text-align: center;
+                color:#000000;
+            }
+            #circular{
+                display:flex;
+                justify-content:center; 
+                align-items:center;
+                min-height: 50vh;
+            }
+            .containerCircu{
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                max-width: 1000px;
+                flex-wrap:wrap;
+                padding:10px 0;
+            }
+            .containerCircu .card{
+                position:relative;
+                width:220px;
+                height:340px;
+                box-shadow: inset 5px 5px 5px
+                 rgba(0,0,0,0.05), inset -5px -5px 5px 
+                 rgba(255,255,255,0.5), 5px 5px 5px 
+                 rgba(0,0,0,0.05), -5px -5px 5px
+                 rgba(255,255,255,0.5);
+                border-radius:20px;
+                margin:30px;
+            }
+            .containerCircu .card .box{
+                position:absolute;
+                top:10px;
+                left:10px;
+                right:10px;
+                bottom:10px;
+                background: linear-gradient(45deg,#fff,#d0fae8);
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                border-radius:20px;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                transition: 0.5s;
+            }
+            .containerCircu .card:hover .box{
+                transform: translateY(-40px);
+                box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+                background: linear-gradient(45deg,#fff,#eb5a5a);
+            }
+            .containerCircu .card .box .content{
+                padding: 20px;
+                text-align: center;
+            }
+            .containerCircu .card .box .content h2{
+                position:absolute;
+                top:40px;
+                bottom: 20px;
+                right:60px;
+                font-size: 4em;
+                color: rgba(0,0,0,0.08);
+                transition:0.5s;
+                pointer-events:none;
+            }
+            .containerCircu .card:hover .box .content h2{
+                color: rgba(0,0,0,0.05);
+            }
+            .containerCircu .card .box .content h3{
+                font-size: 1.2em;
+                margin-top:60px;
+                margin-bottom:30px;
+                color: #777;
+                z-index: 1;
+                transition: 0.5s;
+                font-weight: bold;
+            }
+            .containerCircu .card .box .content p{
+
+                font-size:1em;
+                font-weight:300;
+                color:#777;
+                z-index:1;
+                transition:0.5s;
+            }
+            .containerCircu .card:hover .box .content h3{
+                color:#fff;
+                font-weight: bold;
+            }
+            .containerCircu .card:hover .box .content p{
+                color: #fff;
+            }
+            .containerCircu .card .box .content a{
+                position:relative;
+                display:inline-block;
+                top:20px;
+                padding:8px 20px;
+                background: #41e09e;
+                border-radius: 20px;
+                color:#fff;
+                text-decoration:none;
+                font-weight: 400;
+                box-shadow:0 10px 20px rgba(0,0,0,0.2);
+            }
+            .containerCircu .card:hover .box .content a{
+                background:#ff568f;
+            }
+            
+            .tituloh1{
+                font-size:65px;
+            }
+
+            #imgInsti{
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                min-height: 50vh;
+            }
+            .containerImg{
+                position:relative;
+                display: flex;
+                justify-content:center;
+                align-items:center;
+                flex-wrap: wrap;
+                max-width: 1100px;
+            }
+            .containerImg .card{
+                position:relative;
+                width: 290px;
+                height: 290px;
+                margin:15px;
+                overflow: hidden;
+            }
+            .containerImg .card .imgBx,
+            .containerImg .card .contentBx{
+                position:absolute;
+                top:0;
+                left:0;
+                width: 100%;
+                height:100%;
+            }
+            .containerImg .card .imgBx img{
+                position:absolute;
+                top:0;
+                left:0;
+                width: 100%;
+                height:100%;
+                object-fit: cover;
+            }
+            .containerImg .card .contentBx::before{
+                content:'';
+                position:absolute;
+                top:0;
+                left:0;
+                width:100%;
+                height:100%;
+                background:linear-gradient(60deg,#fff,#d0fae8);
+                transform:ScaleX(0);
+                transition: transform 0.5s ease-in-out;
+                transform-origin:left;
+                transition-delay: 0.2s;
+            }
+            .containerImg .card:hover .contentBx::before{
+                transform:scaleX(1);
+                transition: transform 0.5s ease-in-out;
+                transform-origin:left;
+                transition-delay: 0s;
+            }
+            .containerImg .card .contentBx{
+                display:flex;
+                justify-content:center;
+                align-items: center;
+            }
+            .containerImg .card .contentBx .content{
+                position:relative;
+                padding:30px;
+                z-index:1;
+                transition: 0.5s;
+                transform: translateX(-300px);
+                transition-delay:0s;
+            }
+            .containerImg .card:hover .contentBx .content{
+                transform:translateX(0px);
+                transition-delay:0.5s;
+            }
+            .containerImg .card .contentBx .content h3{
+                font-size:1em;
+                text-transform: uppercase;
+                letter-spacing:1px;
+                font-weight: bold;
+            }
+            .containerImg .card .contentBx .content p{
+                font-size:0.9em;
+                line-height: 1.4em;
+                font-weight:300;
+            }
+
+            #feria{
+                display:flex;
+                justify-content:center; 
+                align-items:center;
+                min-height: 30vh;
+            }
+            .containerFeria{
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                max-width: 1000px;
+                flex-wrap:wrap;
+                padding:10px 0;
+            }
+            .containerFeria .card{
+                position:relative;
+                width:790px;
+                height:410px;
+                box-shadow: inset 5px 5px 5px
+                 rgba(0,0,0,0.05), inset -5px -5px 5px 
+                 rgba(255,255,255,0.5), 5px 5px 5px 
+                 rgba(0,0,0,0.05), -5px -5px 5px
+                 rgba(255,255,255,0.5);
+                border-radius:20px;
+                margin:30px;
+            }
+            .containerFeria .card .box{
+                position:absolute;
+                top:10px;
+                left:10px;
+                right:10px;
+                bottom:10px;
+                background:#fff;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                border-radius:20px;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                transition: 0.7s;
+            }
+            .containerFeria .card:hover .box{
+                transform: translate(20px,-20px);
+                background:linear-gradient(60deg,#FFC300,#900C3F,#3B0E2D);
+                box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+            }
+            .containerFeria .card .box .contentImg{
+                padding: 20px;
+                text-align: center;
+            }
+            .containerFeria .card .box .contentImg img{
+                position:relative;
+                width:660px;
+                height:280px;
+                border-radius: 20px;
+                
+            }
+            .containerFeria .card .box .contentImg a{
+                position:relative;
+                display:inline-block;
+                top:20px;
+                padding:8px 20px;
+                background:linear-gradient(60deg, #900C3F,#FF5733);
+                border-radius: 20px;
+                color:#fff;
+                text-decoration:none;
+                font-weight: 400;
+                box-shadow:0 10px 20px rgba(0,0,0,0.2);
+            }
+
 </style>
 <!--ACÁ EMPIEZA LA PÁGINA-->
-<section class="tm-section" id="institucional"> <!--institucional-->
-    <section>
-        <div class="container">
+<section>
+    <div class="container">
+        <nav>
             <div class="row">
                 <div class="col-6"id="botones">
-                    <a href="#institucion" class="boton">
+                    <a href="#institucional" class="boton">
                         <span>Institución</span>
                         <span>Institución</span>
                     </a>
@@ -475,71 +827,119 @@ if (typeof(Telerik) != 'undefined' && Type.isNamespace(Telerik.Web))
                     </a>
                 </div>
             </div>
+        </nav>
+    </div>
+</section>
+<section class="tm-section"> <!--institucional-->
+    <h1 class="text-dark text-center tituloh1 mb-5" id="institucional">SOMOS <span class="negrilla">UNICARMEN</span></h1>
+    <h1 id="titCircu">CIRCULARES</h1>
+    <section id="circular">
+    <div class="containerCircu mb-4" id="institucion">
+        <div class="card">
+            <div class="box">
+                <div class="content">
+                    <h2>01</h2>
+                    <h3>Politicas de privacidad y manejo de datos</h3>
+                    <a href="http://www.unicarmen.edu.co/Documentos/2020/politicas%20de%20privacidad.pdf"target="_blank">Leer más</a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="box">
+                <div class="content">
+                    <h2>02</h2>
+                    <h3>Instructivo para la inscripción de la prematricula</h3>
+                    <a href="http://www.unicarmen.edu.co/Documentos/PROCEDIMIENTO%20DE%20MATRICULA%20NUEVOS.pdf" target="_blank">Leer más</a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="box">
+                <div class="content">
+                    <h2>03</h2>
+                    <h3>Comunicado para padres de familia</h3>
+                    <a href="#"target="_blank">Leer más</a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="box">
+                <div class="content">
+                    <h2>04</h2>
+                    <h3>Fondo solidario para la Educación</h3>
+                    <a href="#"target="_blank">Leer más</a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="box">
+                <div class="content">
+                    <h2>05</h2>
+                    <h3>Comunicado sobre costos educativos</h3>
+                    <a href="#" target="_blank">Leer más</a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="box">
+                <div class="content">
+                    <h2>06</h2>
+                    <h3>Costos educativos año 2021</h3>
+                    <a href="#"target="_blank">Leer más</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <hr>
+    <section id="feria">
+        <div class="containerFeria mt-4 mb-4">
+            <div class="card">
+                <div class="box">
+                    <div class="contentImg">
+                        <img src="I.E. COLEGIO PARROQUIAL CARMELITANO_files/feria.png" alt="">
+                        <a href="http://www.unicarmen.edu.co/Documentos/2021/FERIA.pdf" target="_blank">Cónoce más</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-    <div class="container mb-4 " id="institucion">
-        <h1 class="text-dark text-center">SOMOS <span class="negrilla">UNICARMEN</span></h1>
-        <div class="row mt-4">
-                <div class="col-4">
-                    <div class="card" style="width: 20rem;">
-                        <div class="card-body">
-                            <h6 class="card-tittle text-center negrilla">POLITICAS DE PRIVACIDAD Y MANEJO DE DATOS</h6>
-                        </div>
-                        <a href="http://www.unicarmen.edu.co/Documentos/2020/politicas%20de%20privacidad.pdf"><img src="I.E. COLEGIO PARROQUIAL CARMELITANO_files/datos.png" class="card-img-top" alt="imagen de politica de privacidad y manejo de datos" target="_blank" style="height:31.4rem"></a>
-                        <a href="http://www.unicarmen.edu.co/Documentos/2020/politicas%20de%20privacidad.pdf" type="button" class="btn fondo-btn"target="_blank">LEER MÁS</a>
-                    </div>
-                </div>
-                 <div class="col-8">
-                    <div class="card" style="width: 40rem;">
-                         <div class="card-body">
-                                <h6 class="card-text text-center negrilla">INSTRUCTIVO PARA LA INSCRIPCION DE LA PREMATRICULA</h6>
-                         </div>
-                            <a href="http://www.unicarmen.edu.co/Documentos/PROCEDIMIENTO%20DE%20MATRICULA%20NUEVOS.pdf"target="_blank"><img src="I.E. COLEGIO PARROQUIAL CARMELITANO_files/maticulas_2022.jpg" class="card-img-top" alt="img instructivo" style="height: 14.4rem;"></a>
-                            <a href="http://www.unicarmen.edu.co/Documentos/PROCEDIMIENTO%20DE%20MATRICULA%20NUEVOS.pdf" type="button" class="btn fondo-btn" target="_blank">LEER MÁS</a>
-                    </div>
-
-                    <div class="card mt-3" style="width: 40rem;">
-                        <div class="card-body">
-                               <h6 class="card-text text-center negrilla">COMUNICADO PARA PADRES DE FAMILIA</h6>
-                        </div>
-                           <a href="http://www.unicarmen.edu.co/Documentos/2021/COMUNICADO%20PARA%20LA%20COMUNIDAD%20EDUCATIVA%20RETOMANDO%20LA%20PRESENCIALIDAD%20DE%20LAS%20ACTIVIDADES%20ESCOLARES%20REVISADO.pdf"target="_blank"><img src="I.E. COLEGIO PARROQUIAL CARMELITANO_files/actividad_escolar.jpg" class="card-img-top" alt="img instructivo" style="height:12rem"></a>
-                           <a href="http://www.unicarmen.edu.co/Documentos/2021/COMUNICADO%20PARA%20LA%20COMUNIDAD%20EDUCATIVA%20RETOMANDO%20LA%20PRESENCIALIDAD%20DE%20LAS%20ACTIVIDADES%20ESCOLARES%20REVISADO.pdf" type="button" class="btn fondo-btn" target="_blank">LEER MÁS</a>
-                   </div>
-                </div>
-        </div>
-    </div>
-    <hr>
-    <div class="container mt-4 mb-4">
-        <div class="card mb-3">
-            <div>
-                <img src="I.E. COLEGIO PARROQUIAL CARMELITANO_files/feria.png" class="card-img-top" alt="feria-oport">
-            </div>
-            <div class="card-body" id="btn-feria">
-              <a class="boton3" href="http://www.unicarmen.edu.co/Documentos/2021/FERIA.pdf" target="_blank" id="boton3">
-                <span>Conoce más</span>
-                <span>Conoce más</span>
-                <span>Conoce más</span>
-                </a>
-            </div>
-          </div>
-    </div>
     <hr>
     <div class="container mt-4">
         <h3 class="text-center text-black titulos-cards">INICIO DE ACTIVIDADES ACADÉMICAS CON LOS ESTUDIANTES</h3>
-        <div class="row">
-            <div class="col-6 mt-4 ">
-                <p class="text-align-justify">El próximo lunes 12 de julio, el colegio se engalana para recibir a los estudiantes en sus instalaciones. Será una bienvenida cargada de mucha emotividad ya que hace meses se esperaban y por fin, se hace realidad. </p>
-                <p class="">Los horarios serán los siguientes:</p>
-                <ul>
-                    <li>· Preescolar: 7:50 am a 1:00 pm</li>
-                    <li>· Primaria: 7:30 am a 1:45 pm</li>
-                    <li>· Bachillerato: 7:00 am a 2:00 pm</li>
-                </ul>
+        <div class="row mb-5">
+            <div class="col-8 mt-4">
+                <p class="text-align-justify tamaño-p">El próximo lunes 12 de julio, el colegio se engalana para recibir a los estudiantes en sus instalaciones. Será una bienvenida cargada de mucha emotividad ya que hace meses se esperaban y por fin, se hace realidad. </p>
+                <p class="tamaño-p">Los horarios serán los siguientes:</p>
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Grado</th>
+                        <th scope="col">Hora entrada</th>
+                        <th scope="col">Hora salida</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr style="background:linear-gradient(80deg, #8ff1c8,#fff)">
+                        <td>Preescolar</td>
+                        <td>7:50 am</td>
+                        <td>1:00 pm</td>
+                      </tr>
+                      <tr>
+                        <td>Primaria</td>
+                        <td>7:30 am</td>
+                        <td>1:45 pm</td>
+                      </tr>
+                      <tr style="background:linear-gradient(80deg, #8ff1c8,#fff)">
+                        <td>Bachillerato</td>
+                        <td>7:00 am</td>
+                        <td>2:00 pm</td>
+                      </tr>
+                    </tbody>
+                </table>   
             </div>  
-            <div class="col-6 mt-4">
-                <img src="I.E. COLEGIO PARROQUIAL CARMELITANO_files/HOLA.jpg" alt="" class="w-100 imf-fluid">
-            </div>
         </div>
+        <hr>
         <div class="row mt-5">
             <h3 class="text-center text-black titulos-cards">INICIO DE ACTIVIDADES EN EL COLEGIO</h3>
             <div class="col-12">
@@ -548,33 +948,87 @@ if (typeof(Telerik) != 'undefined' && Type.isNamespace(Telerik.Web))
             </div>   
         </div>
     </div>
+    <section id="imgInsti">
+        <div class="containerImg">
+            <div class="card">
+                <div class="imgBx">
+                    <img src="I.E. COLEGIO PARROQUIAL CARMELITANO_files/foto_1.png" alt="">
+                </div>
+                <div class="contentBx">
+                     <div class="content">
+                         <h3>Inicio de actividades 2021</h3>
+                         <p>Siempre ha sido una costumbre iniciar actividades ofreciendo a Dios cada una de las actividades que se desarrollaran, este año no fue la excepción y por eso, que vemos a los docentes participando de la Eucaristía de comienzo de año.  </p>
+                     </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="imgBx">
+                    <img src="I.E. COLEGIO PARROQUIAL CARMELITANO_files/foto_2.png" alt="">
+                </div>
+                <div class="contentBx">
+                     <div class="content">
+                         <h3>Manualidades para los docentes</h3>
+                         <p>En la inducción que se le realizó a los docentes, estos realizaron una manualidad con la cual, desearon plasmar su inteligencia múltiple. Cada docente lo decoró mostrando su destreza y habilidad en su pequeña obra de arte. </p>
+                     </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="imgBx">
+                    <img src="I.E. COLEGIO PARROQUIAL CARMELITANO_files/foto_3.png" alt="">
+                </div>
+                <div class="contentBx">
+                     <div class="content">
+                         <h3>Direccionamiento estratégico 2021</h3>
+                         <p>Los docentes cada año reciben las orientaciones del Rector y en este caso del Pbro Jorge Iván Rengifo, frente al direccionamiento estratégico para este año 2021, que pretende potencializar en cada uno de los estudiantes, su inteligencia; para que ellos desarrollen un mejor en cada asignatura con la propuesta de las inteligencias múltiples.</p>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </section>
 <hr>
 <section id="parroquial"> <!--PARROQUIAL-->
     <div class="container">
-            <h1>
+            <h1 class="text-dark text-center">
                 <span>INFORMACIÓN</span> 
                 <span class="negrilla">PARROQUIAL</span>
             </h1>
-                <div class="card mb-3">
-                    <div class="row">
-                        <div class="col-6">
-                            <img src="I.E. COLEGIO PARROQUIAL CARMELITANO_files/fiesta_1.png" class=" img-fluid w-100" alt="...">
+                <h3 style="text-align: center;">ESTUDIO BÍBLICO</h3>
+                <p>Queridos padres de familia deseo que se encuentren muy bien, queremos invitarlos a vivir un tiempo de Crecimiento en la palabra de DIOS. Les dejo aquí la publicidad que contiene los temas, la fecha y los horarios y el link de Inscripción.</p>
+                
+                <p>•  ES modalidad virtual con cupos limitados</p>
+                <p>•  Iniciamos 18 de mayo, hora: 9:00 a.m -10:30 a.m. </p>
                     
-                        </div>
-                        <div class="col-6">
-                            <img src="I.E. COLEGIO PARROQUIAL CARMELITANO_files/fiesta_2.png" class=" img-fluid w-100" alt="...">
-                        </div>
+                    <div> 
+                        <button type="button" class="btn btn-outline-dark">INSCRIPCIONES</button>
                     </div>
-                    <div class="card-body">
-                    <h5 class="card-title negrilla">FIESTA A NUESTRA PATRONA LA VIRGEN EL CARMEN</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                       
+                    <div class="mt-4">
+                        
+                        <img class="w-100" src="img/taller.png" alt="">
                     </div>
-                </div>       
+                    <hr>
+                    <h3 style="text-align: center;">CONVIVENCIA ESCOLAR - FAMILIA CARMELITANA</h3>
     </div>        
-</section>
-    
+    <div class="container1 mt-4" id="convivencia">
+        <div class="serviceBox">
+            <div class="icon"style="--i:#fff">
+                <img src="I.E. COLEGIO PARROQUIAL CARMELITANO_files/jesusf.png" alt="">
+            </div>
+            <div class="content">
+                <p>Como familia carmelitana, y mas aún católica, debemos cultivar entre nuestros estudiantes el amor a la familia identificando valores en ella a semejanza de la Familia de Nazareth.</p>
+            </div>
+        </div>
+        <div class="serviceBox">
+            <div class="icon"style="--i:#fff">
+                <img src="I.E. COLEGIO PARROQUIAL CARMELITANO_files/pray.png" alt="">
+            </div>
+            <div class="content">
+                <p>Padre Misericordioso te pido por mi familia, que cada día de nuestra vida esten llenos de tu bondad y misericordia. Que nunca les falte un motivo para sonreir, salud, amor, alimento, que nunca les falte tu presencia, Amén.</p>
+            </div>
+        </div>
+    </div>
+</section>    
 <section id="coronavirus"> <!--CORONAVIRUS-->
     <div class="container-fluid">
         <img src="I.E. COLEGIO PARROQUIAL CARMELITANO_files/banner-virus.jpg" class="img-fluid" alt="Responsive image" width="2000px" height="500px">
