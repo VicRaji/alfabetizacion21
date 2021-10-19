@@ -417,7 +417,7 @@ if (typeof(Telerik) != 'undefined' && Type.isNamespace(Telerik.Web))
                  rgba(255,255,255,0.5), 5px 5px 5px 
                  rgba(0,0,0,0.05), -5px -5px 5px
                  rgba(255,255,255,0.5);
-                border-radius:20px;
+                border-radius:8px;
                 margin:30px;
             }
             .containerCircu .card .box{
@@ -426,9 +426,9 @@ if (typeof(Telerik) != 'undefined' && Type.isNamespace(Telerik.Web))
                 left:10px;
                 right:10px;
                 bottom:10px;
-                background: linear-gradient(45deg,#fff,#d0fae8);
+                background: linear-gradient(45deg,#fff,#41e09e);
                 box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-                border-radius:20px;
+                border-radius:8px;
                 display:flex;
                 justify-content:center;
                 align-items:center;
@@ -449,12 +449,12 @@ if (typeof(Telerik) != 'undefined' && Type.isNamespace(Telerik.Web))
                 bottom: 10px;
                 right:50px;
                 font-size: 5em;
-                color: rgba(0,0,0,0.08);
+                color: rgba(0,0,0,0.22);
                 transition:0.5s;
                 pointer-events:none;
             }
             .containerCircu .card:hover .box .content h2{
-                color: rgba(0,0,0,0.05);
+                color: rgba(255, 255, 255, 0.42);
             }
             .containerCircu .card .box .content h3{
                 font-size: 1.2em;
@@ -474,7 +474,7 @@ if (typeof(Telerik) != 'undefined' && Type.isNamespace(Telerik.Web))
                 display:inline-block;
                 top:20px;
                 padding:8px 20px;
-                background: #41e09e;
+                background:#4dd89e;
                 border-radius: 20px;
                 color:#fff;
                 text-decoration:none;
@@ -482,7 +482,7 @@ if (typeof(Telerik) != 'undefined' && Type.isNamespace(Telerik.Web))
                 box-shadow:0 10px 20px rgba(0,0,0,0.2);
             }
             .containerCircu .card:hover .box .content a{
-                background:#ff568f;
+                background:#e07272;
             }
 
             #convivencia {
@@ -509,7 +509,7 @@ if (typeof(Telerik) != 'undefined' && Type.isNamespace(Telerik.Web))
                  rgba(255,255,255,0.5), 5px 5px 5px 
                  rgba(0,0,0,0.05), -5px -5px 5px
                  rgba(255,255,255,0.5);
-                border-radius:20px;
+                border-radius:8px;
                 margin:30px;
             }
             .containerConvi .card .serviceBox{
@@ -518,7 +518,7 @@ if (typeof(Telerik) != 'undefined' && Type.isNamespace(Telerik.Web))
                 left:10px;
                 right:10px;
                 bottom:10px;
-                border-radius:20px;
+                border-radius:8px;
                 box-shadow: 0 10px 20px rgba(0,0,0,0.1);
                 display:flex;
                 justify-content:center;
@@ -529,7 +529,8 @@ if (typeof(Telerik) != 'undefined' && Type.isNamespace(Telerik.Web))
             }
             .containerConvi .card:hover .serviceBox{
                 box-shadow: 0 10px 40px rgba(0,0,0,0.4);
-                background: linear-gradient(170deg,#fff,#eb5a5a);
+                /*background: linear-gradient(170deg,#fff,#eb5a5a);*/
+                background: #eb5a5a;
             }
             .containerConvi .card .serviceBox .icon{
                 position:absolute;
@@ -621,7 +622,7 @@ if (typeof(Telerik) != 'undefined' && Type.isNamespace(Telerik.Web))
                 left:0;
                 width:100%;
                 height:100%;
-                background:linear-gradient(60deg,#fff,#d0fae8);
+                background:#41e09e;
                 transform:ScaleX(0);
                 transition: transform 0.5s ease-in-out;
                 transform-origin:left;
@@ -685,7 +686,7 @@ if (typeof(Telerik) != 'undefined' && Type.isNamespace(Telerik.Web))
                  rgba(255,255,255,0.5), 5px 5px 5px 
                  rgba(0,0,0,0.05), -5px -5px 5px
                  rgba(255,255,255,0.5);
-                border-radius:20px;
+                border-radius:8px;
                 margin:30px;
             }
             .containerCovid .card .box{
@@ -696,7 +697,7 @@ if (typeof(Telerik) != 'undefined' && Type.isNamespace(Telerik.Web))
                 bottom:10px;
                 background:#fff;
                 box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-                border-radius:20px;
+                border-radius:8px;
                 display:flex;
                 justify-content:center;
                 align-items:center;
@@ -766,7 +767,7 @@ if (typeof(Telerik) != 'undefined' && Type.isNamespace(Telerik.Web))
             .degradadoParro{
                 font-size:50px;
                 font-weight: 900;
-                background:linear-gradient(5deg,#eb5a5a,#fff);
+                background:#eb5a5a;
                 -webkit-background-clip: text;
                 background-clip: text;
                 -webkit-text-fill-color: transparent;
@@ -787,17 +788,15 @@ if (typeof(Telerik) != 'undefined' && Type.isNamespace(Telerik.Web))
             #footer{
                 margin:0;
                 padding: 0;
-                min-width: 1090px;
+                box-sizing: border-box;
+                border-radius: 12px;
             }
             .footer{
-                width:1040px;
                 position:relative;
                 bottom: 0;
-                background:linear-gradient(80deg,#41e09e,#1d1d1d,#eb5a5a);
+                background: #1d1d1d;
                 color:white;
-                padding:70px 0 30px;
-                border-top-left-radius:65px;
-                border-top-right-radius:65px;
+                padding:200px 0px 60px;
                 font-size: 12px;
                 line-height:10px;
             }
@@ -809,6 +808,51 @@ if (typeof(Telerik) != 'undefined' && Type.isNamespace(Telerik.Web))
                 align-items: flex-start;
                 justify-content: center;
             }
+            .waveRojo {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 10px;
+            transform: rotate(180deg);
+            }
+
+            .waveRojo svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 120px;
+            transform: rotateY(180deg);
+            }
+
+            .waveRojo .shape-fill {
+            fill: #EB5A5A;
+            }
+            .waveVerde {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            transform: rotate(180deg);
+            }
+
+            .waveVerde svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 174px;
+            transform: rotateY(180deg);
+            }
+
+            .waveVerde .shape-fill {
+            fill: #41E09E;
+            }
+
+
+            
 </style>
 <!--ACÁ EMPIEZA LA PÁGINA-->
 <section id="botonesNav">
@@ -855,6 +899,15 @@ if (typeof(Telerik) != 'undefined' && Type.isNamespace(Telerik.Web))
                 <div class="box">
                     <div class="content">
                         <h2>01</h2>
+                        <h3>Informe verbal cuarto periodo</h3>
+                        <a href="http://www.unicarmen.edu.co/Documentos/2021/COMUNICADO%20%2017.pdf"target="_blank">Leer más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box">
+                    <div class="content">
+                        <h2>02</h2>
                         <h3>Politicas de privacidad y manejo de datos</h3>
                         <a href="http://www.unicarmen.edu.co/Documentos/2020/politicas%20de%20privacidad.pdf"target="_blank">Leer más</a>
                     </div>
@@ -863,27 +916,27 @@ if (typeof(Telerik) != 'undefined' && Type.isNamespace(Telerik.Web))
             <div class="card">
                 <div class="box">
                     <div class="content">
-                        <h2>02</h2>
+                        <h2>03</h2>
                         <h3>Instructivo para la inscripción de la prematricula</h3>
                         <a href="http://www.unicarmen.edu.co/Documentos/PROCEDIMIENTO%20DE%20MATRICULA%20NUEVOS.pdf" target="_blank">Leer más</a>
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="box">
-                    <div class="content">
-                        <h2>03</h2>
-                        <h3>Comunicado para padres de familia</h3>
-                        <a href="#"target="_blank">Leer más</a>
-                    </div>
-                </div>
-            </div>    
         </div>
         <div class="row">
             <div class="card">
                 <div class="box">
                     <div class="content">
                         <h2>04</h2>
+                        <h3>Comunicado para padres de familia</h3>
+                        <a href="#"target="_blank">Leer más</a>
+                    </div>
+                </div>
+            </div>    
+            <div class="card">
+                <div class="box">
+                    <div class="content">
+                        <h2>05</h2>
                         <h3>Fondo solidario para la Educación</h3>
                         <a href="#"target="_blank">Leer más</a>
                     </div>
@@ -892,22 +945,13 @@ if (typeof(Telerik) != 'undefined' && Type.isNamespace(Telerik.Web))
             <div class="card">
                 <div class="box">
                     <div class="content">
-                        <h2>05</h2>
+                        <h2>06</h2>
                         <h3>Comunicado sobre costos educativos</h3>
                         <a href="#" target="_blank">Leer más</a>
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="box">
-                    <div class="content">
-                        <h2>06</h2>
-                        <h3>Costos educativos año 2021</h3>
-                        <a href="#"target="_blank">Leer más</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </div>    
         <div class="row">
             <div class="card">
                 <div class="box">
@@ -962,7 +1006,7 @@ if (typeof(Telerik) != 'undefined' && Type.isNamespace(Telerik.Web))
                           </tr>
                         </thead>
                         <tbody>
-                          <tr style="background:linear-gradient(80deg, #8ff1c8,#fff)">
+                          <tr style="background:linear-gradient(20deg, #41e09e,#fff)">
                             <td>Preescolar</td>
                             <td>7:50 am</td>
                             <td>1:00 pm</td>
@@ -972,7 +1016,7 @@ if (typeof(Telerik) != 'undefined' && Type.isNamespace(Telerik.Web))
                             <td>7:30 am</td>
                             <td>1:45 pm</td>
                           </tr>
-                          <tr style="background:linear-gradient(80deg, #8ff1c8,#fff)">
+                          <tr style="background:linear-gradient(80deg, #41e09e,#fff)">
                             <td>Bachillerato</td>
                             <td>7:00 am</td>
                             <td>2:00 pm</td>
@@ -1068,12 +1112,19 @@ if (typeof(Telerik) != 'undefined' && Type.isNamespace(Telerik.Web))
     </div>
 </section>   
 <section id="footer"> <!--footer-->
-    <div class="footer">
+    <div class="footer container-fluid">
         <div class="rowFo">
-            <h3>Institución Educativa Colegio Parroquial Carmelitano.</h3>
+            <h3 class="negrilla">Institución Educativa Colegio Parroquial Carmelitano.</h3>
             <h4>Formación Católica Integral.</h4>
-            <div class="colFo">
-    
+            <div class="waveRojo">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                </svg>
+            </div>
+            <div class="waveVerde">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+                </svg>
             </div>
         </div>
     </div>
