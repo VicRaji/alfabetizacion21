@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /*Desde acá comienzas mis estilos (Att:Víctor)*/
+
+    .negrilla{
+                font-weight: bold;
+            }
+            /*----Botones----*/
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+                
+                /*---Boton parroquia---*/
+                *{
+                    margin:0;
+                    padding:0;
+                    box-sizing:border-box;
+                    font-family: 'Poppins', sans-serif;
+                }
+                #botones{
+                    display:flex;
+                    justify-content:center;
+                    align-items:center;
+                    min-height: 25vh;
+                }
+                .boton2{ 
+                    position:relative;
+                    display:inline-block;
+                    border-radius: 20px;
+                    width:300px;
+                    height:50px;
+                    box-shadow: 0 5px 25px rgba(0,0,0,0.30);
+                }
+                .boton2 span{
+                    position:absolute;
+                    border-radius: 20px;
+                    top:0;
+                    left:0;
+                    width:100%;
+                    height:100%;
+                    color:#fff;
+                    background:#eb5a5a;
+                    display:flex;
+                    justify-content:center;
+                    align-items: center;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    font-size: 18px;
+                }
+                .boton2 span:nth-child(2){
+                    color:#777;
+                    background:#fff;
+                    overflow:hidden;
+                    z-index: 2;
+                    transition:0.5s;
+                    clip-path: circle(100% at 50% 50%);
+                }
+                .boton2 span:nth-child(2):hover{
+                    clip-path: circle(2% at 50% 50%);
+                }
+                /*---Finaliza boton parroquia---*/
+                /*---Boton institucion---*/
+                *{
+                margin:0;
+                padding:0;
+                box-sizing:border-box;
+                font-family: 'Poppins', sans-serif;
+                }
+                #botones{
+                    display:flex;
+                    justify-content:center;
+                    align-items:center;
+                    min-height: 25vh;
+                }
+                .boton{
+                    position:relative;
+                    display:inline-block;
+                    border-radius: 20px;
+                    width:300px;
+                    height:50px;
+                    box-shadow: 0 5px 25px rgba(0,0,0,0.30);
+                }
+                .boton span{
+                    position:absolute;
+                    border-radius: 20px;
+                    top:0;
+                    left:0;
+                    width:100%;
+                    height:100%;
+                    color:#fff;
+                    background:#41e09e;
+                    display:flex;
+                    justify-content:center;
+                    align-items: center;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    font-size: 18px;
+                }
+                .boton span:nth-child(2){
+                    color:#777; 
+                    background:#fff;
+                    overflow:hidden;
+                    z-index: 2;
+                    transition:0.5s;
+                    clip-path: circle(100% at 50% 50%);
+                }
+                .boton span:nth-child(2):hover{
+                    clip-path: circle(0% at 50% 50%)
+                }
+                /*---Finaliza Boton institucion*/
+            /*----Finaliza Botones----*/
+            .fondo-negro{
+                background:black;
+            }
+            .texto-centrado{
+                text-align: center;
+            }
+            .tamaño-p{
+                font-size: 20px;
+            }
+            .padding{
+                padding:80px;
+                padding-top:10px;
+                padding-bottom: 10px;
+            }
+            
+            /*----------------------------------------------------------------------------------------------------------*/
+            #circular{
+                display:flex;
+                justify-content:center; 
+                align-items:center;
+                min-height: 100vh;
+            }
+            .containerCircu{
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                max-width: 1000px;
+                flex-wrap:wrap;
+                padding:10px 0;
+            }
+            .containerCircu h1{
+                text-align: initial;
+            }
+            .containerCircu .card{
+                position:relative;
+                width:220px;
+                height:340px;
+                box-shadow: inset 5px 5px 5px
+                 rgba(0,0,0,0.05), inset -5px -5px 5px 
+                 rgba(255,255,255,0.5), 5px 5px 5px 
+                 rgba(0,0,0,0.05), -5px -5px 5px
+                 rgba(255,255,255,0.5);
+                border-radius:8px;
+                margin:30px;
+            }
+            .containerCircu .card .box{
+                position:absolute;
+                top:10px;
+                left:10px;
+                right:10px;
+                bottom:10px;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+                border-radius:8px;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                transition: 0.5s;
+            }
+            .containerCircu .card:hover .boxVerde{
+                transform: translateY(-40px);
+                box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+                background:#51d387;
+            }
+            .containerCircu .card:hover .boxNegro{
+                transform: translateY(-40px);
+                box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+                background:rgb(129, 127, 127);
+            }
+            .containerCircu .card:hover .boxRojo{
+                transform: translateY(-40px);
+                box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+                background:#eb5a5a;
+            }
+            .containerCircu .card .box .content{
+                padding: 20px;
+                text-align: center;
+            }
+            .containerCircu .card .box .content h2{
+                position:absolute;
+                top:20px;
+                bottom: 10px;
+                right:50px;
+                font-size: 5em;
+                color: rgba(0,0,0,0.22);
+                transition:0.5s;
+                pointer-events:none;
+            }
+            .containerCircu .card:hover .box .content h2{
+                color: rgba(255, 255, 255, 0.42);
+            }
+            .containerCircu .card .box .content h3{
+                font-size: 1.2em;
+                margin-top:60px;
+                margin-bottom:30px;
+                color: #777;
+                z-index: 1;
+                transition: 0.5s;
+                font-weight: bold;
+            }
+            .containerCircu .card:hover .box .content h3{
+                color:#fff;
+                font-weight: bold;
+            }
+            .containerCircu .card .box .content a{
+                position:relative;
+                display:inline-block;
+                top:20px;
+                padding:8px 20px;
+                background:linear-gradient(80deg,#41e09e,#1d1d1d,#eb5a5a);
+                border-radius: 20px;
+                color:#fff;
+                text-decoration:none;
+                font-weight: 400;
+                box-shadow:0 10px 20px rgba(0,0,0,0.2);
+            }
+            .containerCircu .card:hover .boxVerde .content a{
+                background:#07AF83;
+            }
+            .containerCircu .card:hover .boxNegro .content a{
+                background:#3f3c3c;
+            }
+            .containerCircu .card:hover .boxRojo .content a{
+                background:#e07272;
+            }
+
+            #convivencia {
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                min-height:40vh;
+            }
+            .containerConvi{
+                position:relative;
+                width:1000px;
+                display:flex;
+                justify-content:center;
+                align-items: center;
+                gap:20px;
+                flex-wrap:wrap;
+            }
+            .containerConvi .card{
+                position:relative;
+                width:320px;
+                height:424px;
+                box-shadow: inset 5px 5px 5px
+                 rgba(0,0,0,0.05), inset -5px -5px 5px 
+                 rgba(255,255,255,0.5), 5px 5px 5px 
+                 rgba(0,0,0,0.05), -5px -5px 5px
+                 rgba(255,255,255,0.5);
+                border-radius:8px;
+                margin:30px;
+            }
+            .containerConvi .card .serviceBox{
+                position:absolute;
+                top:10px;
+                left:10px;
+                right:10px;
+                bottom:10px;
+                border-radius:8px;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                transition: 0.5s;
+                
+                overflow: hidden;
+            }
+            .containerConvi .card:hover .serviceBox{
+                box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+                /*background: linear-gradient(170deg,#fff,#eb5a5a);*/
+                background: #eb5a5a;
+            }
+            .containerConvi .card .serviceBox .icon{
+                position:absolute;
+                top:0;
+                left:0;
+                width:100%;
+                height:100%;
+                background: var(--i);
+                transition:0.5s;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                z-index:2;
+            }
+            .containerConvi .serviceBox:hover .icon{
+                top:30px;
+                left: calc(50% - 40px);
+                width: 80px;
+                height:80px;
+                border-radius:50%;
+                transition-delay: 0s;
+            }
+            .containerConvi .serviceBox .icon img{
+                width:100px;
+                height:100px;
+                transition:0.5s;
+            }
+            .containerConvi .serviceBox:hover .icon img{
+                width:50px;
+                height:50px;
+            }
+            .containerConvi .serviceBox .content{
+                position:relative;
+                padding:30px;
+                color:#fff;
+                text-align: center;
+                margin-top: 100px;
+                z-index:1;
+                transform: scale(0);
+                transition: 0.5s;
+                transition-delay: 0.25s;
+            }
+            .containerConvi .serviceBox:hover .content{
+                transform: scale(1);
+                transition-delay: 0.25s;
+            }
+            .containerConvi .serviceBox .content p{
+                font-size:20px;
+            }
+            /*-------------------------------------------------------------------------------------------------------*/
+            .containerImg{
+                position:relative;
+                display: flex;
+                justify-content:center;
+                align-items:center;
+                flex-wrap: wrap;
+                max-width: 1100px;
+                padding: 15px;
+                padding-bottom: 0px;
+            }
+            .containerImg .card{
+                position:relative;
+                width: 300px;
+                height: 300px;
+                margin:15px;
+                overflow: hidden;
+                border-radius: 8px;
+            }
+            .containerImg .card .imgBx,
+            .containerImg .card .contentBx{
+                position:absolute;
+                top:0;
+                left:0;
+                width: 100%;
+                height:100%;
+            }
+            .containerImg .card .imgBx img{
+                position:absolute;
+                top:0;
+                left:0;
+                width: 100%;
+                height:100%;
+                object-fit: cover;
+            }
+            .containerImg .card .contentBx::before{
+                content:'';
+                position:absolute;
+                top:0;
+                left:0;
+                width:100%;
+                height:100%;
+                background:#41e09e;
+                transform:ScaleX(0);
+                transition: transform 0.5s ease-in-out;
+                transform-origin:left;
+                transition-delay: 0.2s;
+            }
+            .containerImg .card:hover .contentBx::before{
+                transform:scaleX(1);
+                transition: transform 0.5s ease-in-out;
+                transform-origin:left;
+                transition-delay: 0s;
+            }
+            .containerImg .card .contentBx{
+                display:flex;
+                justify-content:center;
+                align-items: center;
+            }
+            .containerImg .card .contentBx .content{
+                position:relative;
+                padding:30px;
+                z-index:1;
+                transition: 0.5s;
+                transform: translateX(-300px);
+                transition-delay:0s;
+            }
+            .containerImg .card:hover .contentBx .content{
+                transform:translateX(0px);
+                transition-delay:0.3s;
+            }
+            .containerImg .card .contentBx .content h3{
+                font-size:1em;
+                text-transform: uppercase;
+                letter-spacing:1px;
+                font-weight: bold;
+            }
+            .containerImg .card .contentBx .content p{
+                font-size:1em;
+                line-height: 1em;
+                font-weight:300;
+            }
+
+            #coronavirus{
+                display:flex;
+                justify-content:center; 
+                align-items:center;
+                min-height: 30vh;
+            }
+            .containerCovid{
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                max-width: 1000px;
+                flex-wrap:wrap;
+                padding:10px 0;
+            }
+            .containerCovid .card{
+                position:relative;
+                width:990px;
+                height:480px;
+                box-shadow: inset 5px 5px 5px
+                 rgba(0,0,0,0.05), inset -5px -5px 5px 
+                 rgba(255,255,255,0.5), 5px 5px 5px 
+                 rgba(0,0,0,0.05), -5px -5px 5px
+                 rgba(255,255,255,0.5);
+                border-radius:8px;
+                margin:30px;
+            }
+            .containerCovid .card .box{
+                position:absolute;
+                top:10px;
+                left:10px;
+                right:10px;
+                bottom:10px;
+                background:#fff;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                border-radius:8px;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                transition: 0.7s;
+            }
+            .containerCovid .card .box .contentImg{
+                padding: 20px;
+                text-align: center;
+            }
+            .containerCovid .card .box .contentImg img{
+                position:relative;
+                width:760px;
+                height:320px;
+                border-radius: 20px;
+                
+            }
+            .containerCovid .card .box .contentImg a{
+                position:relative;
+                display:inline-block;
+                top:20px;
+                padding:8px 20px;
+                background:rgb(12, 153, 235);
+                border-radius: 20px;
+                color:#fff;
+                text-decoration:none;
+                font-weight: 400;
+                box-shadow:0 10px 20px rgba(0,0,0,0.2);
+                transition: 0.3s;
+            }
+            .containerCovid .card .box .contentImg a:hover{
+                transform: translateY(-8px);
+                box-shadow:0 10px 20px rgba(0,0,0,0.2);
+                background:rgb(84, 87, 88);
+            }
+            .titleText{
+                color:#111;
+                font-size:3em;
+                font-weight: 300;
+            } 
+            .titleText span{
+                background:linear-gradient(45deg,#41e09e,#fff);
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-weight: 700;
+                font-size: 80px;
+            }
+
+            #institucional{
+                min-height: 25vh;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .somos{
+                font-size: 60px;
+                color:#000;
+            }
+            .degradadoUni{
+                font-size:60px;
+                font-weight: 900;
+                background:linear-gradient(80deg,#41e09e,#1d1d1d,#eb5a5a);
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            .degradadoParro{
+                font-size:50px;
+                font-weight: 900;
+                background:#eb5a5a;
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            .imgBorder{
+                border-radius: 8px;
+            }
+            .titParro{
+                font-size: 50px;
+                font-weight:400;
+                color:#000;
+            }
+            #covid{
+               display:flex;
+               justify-content:center;
+               align-items: center;
+            }
+            #footer{
+                margin:0;
+                padding: 0;
+                box-sizing: border-box;
+                border-radius: 12px;
+            }
+            .footer{
+                position:relative;
+                bottom: 0;
+                background: #1d1d1d;
+                color:white;
+                padding:200px 0px 60px;
+                font-size: 12px;
+                line-height:10px;
+            }
+            .rowFo{
+                width:85%;
+                margin: auto;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                justify-content: center;
+            }
+            .waveRojo {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 10px;
+            transform: rotate(180deg);
+            }
+
+            .waveRojo svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 120px;
+            transform: rotateY(180deg);
+            }
+
+            .waveRojo .shape-fill {
+            fill: #EB5A5A;
+            }
+            .waveVerde {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            transform: rotate(180deg);
+            }
+
+            .waveVerde svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 174px;
+            transform: rotateY(180deg);
+            }
+
+            .waveVerde .shape-fill {
+            fill: #41E09E;
+            }
+
+</style>
+<body>
+    <section id="botonesNav">
+        <div class="container">
+            <nav>
+                <div class="row">
+                    <div class="col-6"id="botones">
+                        <a href="#institucional" class="boton">
+                            <span>Institución</span>
+                            <span>Institución</span>
+                        </a>
+                    </div>
+                    <div class="col-6"id="botones">
+                        <a href="#parroquial" class="boton2">
+                            <span>Parroquia</span>
+                            <span>Parroquia</span>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </section>
+    <div class="container text-center">
+        <h1 class="somos">SOMOS <span class="degradadoUni"> UNICARMEN</span></h1>
+    </div>
+    <section id="coronavirus"class="mt-4"> <!--CORONAVIRUS-->
+        <div class="containerCovid mt-4 mb-2">
+            <div class="card">
+                <div class="box">
+                    <div class="contentImg">
+                        <img src="I.E. COLEGIO PARROQUIAL CARMELITANO_files/virus.png" alt="">
+                        <a href="http://www.unicarmen.edu.co/Documentos/2020/protocolo.pdf" target="_blank">Cónoce más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section> <!--institucional-->
+        <section id="circular">
+        <div class="containerCircu mb-2">
+            <h1 class="titleText" id="institucional"><span>C</span>omunicados</h1>
+            <div class="row">
+                <div class="card">
+                    <div class="boxVerde box">
+                        <div class="content">
+                            <h2>01</h2>
+                            <h3>Informe verbal cuarto periodo</h3>
+                            <a href="http://www.unicarmen.edu.co/Documentos/2021/COMUNICADO%20%2017.pdf"target="_blank" class="aVerde">Leer más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="boxVerde box">
+                        <div class="content">
+                            <h2>02</h2>
+                            <h3>Politicas de privacidad y manejo de datos</h3>
+                            <a href="http://www.unicarmen.edu.co/Documentos/2020/politicas%20de%20privacidad.pdf"target="_blank">Leer más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="boxVerde box">
+                        <div class="content">
+                            <h2>03</h2>
+                            <h3>Instructivo para la inscripción de la prematricula</h3>
+                            <a href="http://www.unicarmen.edu.co/Documentos/PROCEDIMIENTO%20DE%20MATRICULA%20NUEVOS.pdf" target="_blank">Leer más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card">
+                    <div class="boxNegro box">
+                        <div class="content">
+                            <h2>04</h2>
+                            <h3>Comunicado para padres de familia</h3>
+                            <a href="http://www.unicarmen.edu.co/Documentos/2021/COMUNICADO%20PARA%20LA%20COMUNIDAD%20EDUCATIVA%20RETOMANDO%20LA%20PRESENCIALIDAD%20DE%20LAS%20ACTIVIDADES%20ESCOLARES%20REVISADO.pdf"target="_blank">Leer más</a>
+                        </div>
+                    </div>
+                </div>    
+                <div class="card">
+                    <div class="boxNegro box">
+                        <div class="content">
+                            <h2>05</h2>
+                            <h3>Fondo solidario para la Educación</h3>
+                            <a href="http://www.unicarmen.edu.co/Documentos/2021/fondo.pdf"target="_blank">Leer más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="boxNegro box">
+                        <div class="content">
+                            <h2>06</h2>
+                            <h3>Comunicado sobre costos educativos</h3>
+                            <a href="http://www.unicarmen.edu.co/Documentos/2021/costos_2021.pdf" target="_blank">Leer más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+            <div class="row">
+                <div class="card">
+                    <div class="boxRojo box">
+                        <div class="content">
+                            <h2>07</h2>
+                            <h3>Lista de utiles escolares año 2021</h3>
+                            <a href="http://www.unicarmen.edu.co/Documentos/2020/utiles3.pdf"target="_blank">Leer más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="boxRojo box">
+                        <div class="content">
+                            <h2>08</h2>
+                            <h3>Costos educativos año 2021</h3>
+                            <a href="http://www.unicarmen.edu.co/Documentos/costos_2021.pdf"target="_blank">Leer más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+        <hr>
+        <section id="inicioAct">
+            <div class="container mt-4">
+                <div class="row">
+                    <h3 class="text-center text-black titulos-cards">INICIO DE ACTIVIDADES ACADÉMICAS</h3>
+                    <h3 class="text-center negrilla">CON LOS ESTUDIANTES</h3>
+                </div>
+                <div class="row mb-5 padding">
+                    <div class="col-12">
+                        <p class="text-align-justify tamaño-p">El próximo lunes 12 de julio, el colegio se engalana para recibir a los estudiantes en sus instalaciones. Será una bienvenida cargada de mucha emotividad ya que hace meses se esperaban y por fin, se hace realidad. </p>
+                        <p class="tamaño-p">Los horarios serán los siguientes:</p>
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col">Grado</th>
+                                <th scope="col">Hora entrada</th>
+                                <th scope="col">Hora salida</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr style="background:#8deec6">
+                                <td>Preescolar</td>
+                                <td>7:50 am</td>
+                                <td>1:00 pm</td>
+                              </tr>
+                              <tr>
+                                <td>Primaria</td>
+                                <td>7:30 am</td>
+                                <td>1:45 pm</td>
+                              </tr>
+                              <tr style="background: #8deec6">
+                                <td>Bachillerato</td>
+                                <td>7:00 am</td>
+                                <td>2:00 pm</td>
+                              </tr>
+                            </tbody>
+                        </table>   
+                    </div>  
+                </div>
+            </div>    
+                <hr>
+            <div class="container mt-4">    
+                <div class="row">
+                    <h3 class="text-center text-black titulos-cards">INICIO DE ACTIVIDADES</h3>
+                    <h3 class="negrilla text-center">EN EL COLEGIO</h3>
+                    <div class="col-12 padding">
+                        <p class="text-align-justify tamaño-p">El lunes 6 de julio en el patio central de la institución, los docentes liderados por el Rector Pbro. Jorge Iván Rengifo Álvarez, se dio inicio a las actividades académicas en este segundo semestre del año. En momento pequeño de oración se oró para llevar a feliz termino la obra que Dios nos encomendó. </p>
+                        <img src="I.E. COLEGIO PARROQUIAL CARMELITANO_files/INICIO.jpg" alt="" class="w-100 img-fluid imgBorder">
+                    </div> 
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section id="imgInsti">
+            <div class="containerImg">
+                <div class="card">
+                    <div class="imgBx">
+                        
+                        <img src="I.E. COLEGIO PARROQUIAL CARMELITANO_files/foto_1.png" alt="">
+                    </div>
+                    <div class="contentBx">
+                         <div class="content">
+                             <h3>Inicio de actividades 2021</h3>
+                             <p>Siempre ha sido una costumbre iniciar actividades ofreciendo a Dios cada una de las actividades que se desarrollaran, este año no fue la excepción y por eso, que vemos a los docentes participando de la Eucaristía de comienzo de año.  </p>
+                         </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="I.E. COLEGIO PARROQUIAL CARMELITANO_files/foto_2.png" alt="">
+                    </div>
+                    <div class="contentBx">
+                         <div class="content">
+                             <h3>Manualidades para los docentes</h3>
+                             <p>En la inducción que se le realizó a los docentes, estos realizaron una manualidad con la cual, desearon plasmar su inteligencia múltiple. Cada docente lo decoró mostrando su destreza y habilidad en su pequeña obra de arte. </p>
+                         </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="I.E. COLEGIO PARROQUIAL CARMELITANO_files/foto_3.png" alt="">
+                    </div>
+                    <div class="contentBx">
+                         <div class="content">
+                             <h3>Direccionamiento estratégico 2021</h3>
+                             <p>Los docentes cada año reciben las orientaciones del Rector y en este caso del Pbro Jorge Iván Rengifo, frente al direccionamiento estratégico para este año 2021, que pretende potencializar en cada uno de los estudiantes, su inteligencia; para que ellos desarrollen un mejor en cada asignatura con la propuesta de las inteligencias múltiples.</p>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>    
+    <hr>
+    <section id="parroquial"> <!--PARROQUIAL-->
+        <div class="container mb-5 p-5 pt-0">
+            <h1 class="text-center titParro">INFORMACIÓN <span class="degradadoParro">PARROQUIAL</span></h1> 
+        </div>
+        <div class="containerConvi mt-4" id="convivencia">
+                <div class="row">
+                    <h4 class="text-center">CONVIVENCIA ESCOLAR <span class="negrilla">FAMILIA CARMELITANA</span></h4>
+                </div>
+                <div class="row mt-4">
+                <div class="card">
+                    <div class="serviceBox">
+                        <div class="icon"style="--i:#fff">
+                            <img src="I.E. COLEGIO PARROQUIAL CARMELITANO_files/jesusf.png" alt="">
+                        </div>
+                        <div class="content">
+                            <p>Como familia carmelitana, y mas aún católica, debemos cultivar entre nuestros estudiantes el amor a la familia identificando valores en ella a semejanza de la Familia de Nazareth.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="serviceBox">
+                        <div class="icon"style="--i:#fff">
+                            <img src="I.E. COLEGIO PARROQUIAL CARMELITANO_files/pray.png" alt="">
+                        </div>
+                        <div class="content">
+                            <p>Padre Misericordioso te pido por mi familia, que cada día de nuestra vida esten llenos de tu bondad y misericordia. Que nunca les falte un motivo para sonreir, salud, amor, alimento, que nunca les falte tu presencia, Amén.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>   
+    <section id="footer"> <!--footer-->
+        <div class="footer container-fluid">
+            <div class="rowFo">
+                <h3 class="negrilla">Institución Educativa Colegio Parroquial Carmelitano.</h3>
+                <h4>Formación Católica Integral.</h4>
+                <div class="waveRojo">
+                    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                    </svg>
+                </div>
+                <div class="waveVerde">
+                    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
